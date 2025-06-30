@@ -1,0 +1,110 @@
+body {
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Vazir', sans-serif;
+        }
+        .product-details {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-info {
+            padding: 1rem;
+        }
+        .product-info h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .product-info h5 {
+            font-size: 1.25rem;
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+        }
+        .table {
+            margin-bottom: 1.5rem;
+        }
+        .table td {
+            padding: 0.75rem;
+            border-top: 1px solid #dee2e6;
+        }
+        .add-to-cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .add-to-cart:hover {
+            background-color: #218838;
+        }
+        .loading {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #6c757d;
+            padding: 2rem;
+        }
+        @media (max-width: 768px) {
+            .product-image {
+                margin-bottom: 1.5rem;
+            }
+            .product-info h1 {
+                font-size: 1.75rem;
+            }
+            .product-info h5 {
+                font-size: 1.1rem;
+            }
+        }
+    
+
+
+.table-responsive {
+    overflow-x: auto;
+}
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+.table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+.table td:first-child {
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.add-to-cart:hover {
+    background-color: #218838;
+}
+.loading {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+}

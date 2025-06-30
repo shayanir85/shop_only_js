@@ -1,0 +1,168 @@
+{
+  "products": [
+    {
+      "classification":"LG",
+      "name": "هدفون گیمینگ اونیکوما",
+      "model": "headset K19 Professional",
+      "connection": "USB",
+      "type": "با سیم",
+      "price": 894000,
+      "image": "products/headset.jpg",
+      "number_of_products": 150
+    },
+    {
+      "classification":"GK",
+      "name": "منبع تغذیه کامپیوتر گرین",
+      "model": "POWER 400 ECO GREEN",
+      "type": "غیر ماژولار",
+      "price": 2455000,
+      "image": "products/power.jpg",
+      "number_of_products": 200
+    },
+    {
+      "classification":"LG",
+      "name": "خمیر سیلیکون دیپ کول",
+      "model": "Z3",
+      "price": 430000,
+      "image": "products/khamir.jpg",
+      "number_of_products": 280
+    },
+    {
+      "classification":"LG",
+      "name": "پد موس",
+      "model": "G310",
+      "price": 32700,
+      "image": "products/pad.jpg",
+      "number_of_products": 120
+    },
+    {
+      "classification":"LG",
+      "name": "ماوس گیمینگ هیسکا",
+      "model": "HX-MOG310",
+      "connection": "USB",
+      "type": "با سیم",
+      "price": 447000,
+      "image": "products/mouse.jpg",
+      "number_of_products": 250
+    },
+    {
+      "classification":"LG",
+      "name": "کیبورد گیمینگ ردراگون",
+      "model": "K552 Kumara",
+      "features": {
+        "سوییچ": "مکانیکال قرمز",
+        "طرح بندی": "Tenkeyless",
+        "نورپردازی": "RGB"
+      },
+      "price": 4072000,
+      "image": "products/keyboard.jpg",
+      "number_of_products": 180
+    },
+    {
+      "classification":"GK",
+      "name": "رم دسکتاپ DDR4 دو کاناله",
+      "model": "VENGEANCE RGB PRO",
+      "specs": {
+        "سرعت": "3200 مگاهرتز",
+        "حافظه": "32 گیگابایت",
+        "تعداد ماژول": 2
+      },
+      "price": 7666000,
+      "image": "products/ram.jpg",
+      "number_of_products": 220
+    },
+    {
+      "classification":"GK",
+      "name": "کارت گرافیک پی ان وای",
+      "model": "NVIDIA RTX A4500",
+      "price": 145000000,
+      "features": {
+        "هسته": 7168,
+        "لیتوگرافی": 8,
+        "ظرفیت حافظه": "20 گیگابایت"
+      },
+      "image": "products/gpu.jpg",
+      "number_of_products": 100
+    },
+    {
+      "classification":"GK",
+      "name": "پردازنده اینتل",
+      "model": "CPU INTEL COREi5 14600K BOX",
+      "graphics": "Intel UHD Graphics 770",
+      "price": 24000000,
+      "image": "products/cpu.jpg",
+      "number_of_products": 300
+    },
+    {
+      "classification":"GK",
+      "name": "کیس کامپیوتر گیمینگ فاطر",
+      "model": "FG-880W",
+      "price": 6512000,
+      "image": "products/case.jpg",
+      "number_of_products": 170
+    },
+    {
+      "classification":"GK",
+      "name": "هارد اکسترنال سیگیت",
+      "model": "Expansion 1TB",
+      "features": {
+        "ظرفیت": "1 ترابایت",
+        "نوع": "HDD",
+        "رابط": "USB 3.0"
+      },
+      "price": 1500000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/281137.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+      "number_of_products": 190
+    },
+    {
+      "classification":"GK",
+      "name": "اس اس دی اینترنال سامسونگ",
+      "model": "870 QVO 1TB",
+      "features": {
+        "ظرفیت": "1 ترابایت",
+        "نوع": "SSD",
+        "رابط": "SATA III"
+      },
+      "price": 3200000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/8a28dfa048060386b67190b3a54b2972c4791279_1604320366.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+      "number_of_products": 260
+    },
+    {
+      "classification":"SH",
+      "name": "کارت خوان یو اس بی",
+      "model": "Transcend RDF8",
+      "features": {
+        "سرعت انتقال": "5 گیگابیت بر ثانیه",
+        "پورت": "USB 3.0"
+      },
+      "price": 250000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/528057.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+      "number_of_products": 140
+    },
+    {
+      "classification":"SH",
+      "name": "مودم وای فای تی پی لینک",
+      "model": "Archer C6",
+      "features": {
+        "سرعت": "1200 مگابیت بر ثانیه",
+        "فرکانس": "دو بانده"
+      },
+      "price": 1800000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/99ab4f70fce0829c52a9ad1e10abf7fecbe457c7_1697890454.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+      "number_of_products": 230
+    },
+    {
+      "classification":"M",
+      "name": "مانیتور گیمینگ ایسوس",
+      "model": "TUF Gaming VG279Q",
+      "features": {
+        "اندازه": "27 اینچ",
+        "نرخ تازه سازی": "144 هرتز",
+        "رزولوشن": "1920x1080"
+      },
+      "price": 8500000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/7eac1e3fe4fe03c1cfc49e8d2bffe338ffa888dd_1609244850.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+      "number_of_products": 10
+    }
+  ]
+}

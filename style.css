@@ -1,0 +1,128 @@
+.back{
+
+    background-color: #ffffff;
+    background-image: url(imgs/back-img.jpg);
+    background-size: cover; 
+    background-position: center; 
+    
+}
+.back_shop {
+    overflow-x: hidden;
+    height: 100vh;
+    }  
+    
+.TotalPrice{
+    box-shadow: #d7d7d7 0px 0px 10px;
+    position: fixed;
+    background-color: #00FF00; 
+    color: rgb(0, 0, 0); 
+    border: none; 
+    border-radius: 100px; 
+    padding: 10px 20px; 
+    text-align: center; 
+    font-size: 15px;
+    display: inline-block;  
+    bottom: 80px; 
+    animation: scale_in 0.2s ease-in-out;
+    left: 20px; 
+}
+@keyframes scale_in {
+    0%{
+        padding: 10px 0px; 
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    50%{
+        
+    }
+    100% {
+        padding: 10px 20px ;
+        opacity: 1;
+        transform: translateX(0);
+    }}
+@keyframes fadeIn {
+    0%{
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    50%{
+        opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }}
+    @keyframes scale {
+        0%{
+          opacity: 0;
+          scale: 0;
+        }
+        50%{
+            opacity: 0.2;
+        }
+        100% {
+          opacity: 1;
+          scale: 1;
+        }
+    }  
+.sb_kharid {
+    box-shadow: #000000 0px 0px 10px;
+    height: 45px;
+    width: 45px;
+    border-radius: 100px;
+    position: fixed;
+    background-color: rgb(0, 59, 118);
+    bottom: 20px; 
+    left: 20px;
+    background-image: url(icon/shop.png);   
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    animation: fadeIn 0.2s ease-in-out;
+}
+.home {
+    animation: fadeIn 0.2s ease-in-out;
+    box-shadow: #d7d7d7 0px 0px 10px;
+    height: 45px;
+    width: 45px;
+    border-radius: 100px;
+    position: fixed;
+    background-color: rgb(0, 59, 118);
+    bottom: 20px; 
+    left: 20px;
+    background-image: url(icon/home.png);   
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.sb-kharid {
+    height: 25px;
+    width: 25px;
+    border-radius: 100px;
+    position: fixed;
+    background-color: rgb(255, 0, 0);
+    bottom: 48px; 
+    color: white;
+    left: 48px;  
+    overflow: hidden;
+    text-align: center;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    animation: scale 0.2s ease-in-out;
+    line-height: 20px; 
+}
+.img {
+    width: 50%; 
+    height: auto; 
+  }
+
+.bargasht{
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    position: fixed;
+    margin-left: 12px;
+    margin-top: -30px;
+    background-color: rgb(255, 255, 255);
+}
