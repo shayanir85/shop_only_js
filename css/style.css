@@ -1,7 +1,7 @@
 .back{
 
     background-color: #ffffff;
-    background-image: url(imgs/back-img.jpg);
+    background-image: url(../imgs/back-img.jpg);
     background-size: cover; 
     background-position: center; 
     
@@ -74,7 +74,7 @@
     background-color: rgb(0, 59, 118);
     bottom: 20px; 
     left: 20px;
-    background-image: url(icon/shop.png);   
+    background-image: url(../icon/shop.png);   
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: center; 
@@ -90,7 +90,7 @@
     background-color: rgb(0, 59, 118);
     bottom: 20px; 
     left: 20px;
-    background-image: url(icon/home.png);   
+    background-image: url(../icon/home.png);   
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: center; 

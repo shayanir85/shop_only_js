@@ -7,7 +7,7 @@
       "connection": "USB",
       "type": "با سیم",
       "price": 894000,
-      "image": "products/headset.jpg",
+      "image": "img/headset.jpg",
       "number_of_products": 150
     },
     {
@@ -16,7 +16,7 @@
       "model": "POWER 400 ECO GREEN",
       "type": "غیر ماژولار",
       "price": 2455000,
-      "image": "products/power.jpg",
+      "image": "img/power.jpg",
       "number_of_products": 200
     },
     {
@@ -24,7 +24,7 @@
       "name": "خمیر سیلیکون دیپ کول",
       "model": "Z3",
       "price": 430000,
-      "image": "products/khamir.jpg",
+      "image": "img/khamir.jpg",
       "number_of_products": 280
     },
     {
@@ -32,7 +32,7 @@
       "name": "پد موس",
       "model": "G310",
       "price": 32700,
-      "image": "products/pad.jpg",
+      "image": "img/pad.jpg",
       "number_of_products": 120
     },
     {
@@ -42,7 +42,7 @@
       "connection": "USB",
       "type": "با سیم",
       "price": 447000,
-      "image": "products/mouse.jpg",
+      "image": "img/mouse.jpg",
       "number_of_products": 250
     },
     {
@@ -55,7 +55,7 @@
         "نورپردازی": "RGB"
       },
       "price": 4072000,
-      "image": "products/keyboard.jpg",
+      "image": "img/keyboard.jpg",
       "number_of_products": 180
     },
     {
@@ -68,7 +68,7 @@
         "تعداد ماژول": 2
       },
       "price": 7666000,
-      "image": "products/ram.jpg",
+      "image": "img/ram.jpg",
       "number_of_products": 220
     },
     {
@@ -81,7 +81,7 @@
         "لیتوگرافی": 8,
         "ظرفیت حافظه": "20 گیگابایت"
       },
-      "image": "products/gpu.jpg",
+      "image": "img/gpu.jpg",
       "number_of_products": 100
     },
     {
@@ -90,7 +90,7 @@
       "model": "CPU INTEL COREi5 14600K BOX",
       "graphics": "Intel UHD Graphics 770",
       "price": 24000000,
-      "image": "products/cpu.jpg",
+      "image": "img/cpu.jpg",
       "number_of_products": 300
     },
     {
@@ -98,7 +98,7 @@
       "name": "کیس کامپیوتر گیمینگ فاطر",
       "model": "FG-880W",
       "price": 6512000,
-      "image": "products/case.jpg",
+      "image": "img/case.jpg",
       "number_of_products": 170
     },
     {
@@ -111,7 +111,7 @@
         "رابط": "USB 3.0"
       },
       "price": 1500000,
-      "image": "https://dkstatics-public.digikala.com/digikala-products/281137.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+      "image": "img/gpu.jpg",
       "number_of_products": 190
     },
     {
@@ -124,7 +124,7 @@
         "رابط": "SATA III"
       },
       "price": 3200000,
-      "image": "https://dkstatics-public.digikala.com/digikala-products/8a28dfa048060386b67190b3a54b2972c4791279_1604320366.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+      "image": "img/gpu.jpg",
       "number_of_products": 260
     },
     {
@@ -136,7 +136,7 @@
         "پورت": "USB 3.0"
       },
       "price": 250000,
-      "image": "https://dkstatics-public.digikala.com/digikala-products/528057.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+      "image": "img/gpu.jpg",
       "number_of_products": 140
     },
     {
@@ -148,7 +148,7 @@
         "فرکانس": "دو بانده"
       },
       "price": 1800000,
-      "image": "https://dkstatics-public.digikala.com/digikala-products/99ab4f70fce0829c52a9ad1e10abf7fecbe457c7_1697890454.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+      "image": "img/gpu.jpg",
       "number_of_products": 230
     },
     {
@@ -161,7 +161,7 @@
         "رزولوشن": "1920x1080"
       },
       "price": 8500000,
-      "image": "https://dkstatics-public.digikala.com/digikala-products/7eac1e3fe4fe03c1cfc49e8d2bffe338ffa888dd_1609244850.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+      "image": "img/gpu.jpg",
       "number_of_products": 10
     }
   ]
