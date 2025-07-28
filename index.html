@@ -1,67 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سبد خرید</title>
-    <link href="bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">    
-    <link rel="stylesheet" href="css/style.css">
+    <title>Login-Form</title>
+    <link rel="stylesheet" href="css/login.css">
+    <!-- bootstrap Links -->
+    <link href="bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-5.3.7-dist/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="bootstrap-5.3.7-dist/css/bootstrap-grid.rtl.css" rel="stylesheet">
+    <link href="bootstrap-5.3.7-dist/css/bootstrap-reboot.min.css" rel="stylesheet">
+    <link href="bootstrap-5.3.7-dist/css/bootstrap-utilities.min.css" rel="stylesheet">
+    <link href="bootstrap-5.3.7-dist/css/bootstrap-utilities.rtl.min.css" rel="stylesheet">
 </head>
 
-<body class="back">
-    <nav class="sticky-top navbar navbar-expand-lg bg-body-tertiary shadow-lg">
-        <div class="container-fluid">
-            <a class="" href="#">
-                <img class="m-2" src="img/logo.png" style="height: 50px;" alt="">
-            </a>
-            <form class="" style="left: 0px;" role="search">
-                <input id="s-input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="shop.html"> مشاهده سبد خرید </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">خرید</a>
-                    </li>
-                </ul>
-                <div class="dropdown">
-                    <button class="btn mr-2 dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        دسته بندی
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" id="LG">لوازم جانبی</a></li>
-                        <li><a class="dropdown-item" id="GK">قطعات کامپیوتر</a></li>
-                        <li><a class="dropdown-item" id="M">مانیتور</a></li>
-                        <li><a class="dropdown-item" id="SH">شبکه</a></li>
-                    </ul>
-                </div>
+<body>
+    <!-- bg-dark-body custome css class in 'css/login.css'  -->
+    <div class="bg-dark-body">
+        <!-- fatemeh: center the div verticaly -->
+        <form
+            class="position-relative justify-content-center align-items-center m-5 rounded-4 p-3 bg-light col overflow-a col-4 mx-auto">
+            <div class="m-4">
+                <label for="name" class="mt-1 text-muted">Email:</label>
+                <input type="email" class="form-control" name="name" id="">
             </div>
+            <input class="btn btn-info m-3 f-right" type="submit" value="Login">
+        </form>
+        <div class="w-100 text-center mx-auto">
+            <a class="nav-item text-secondary text-none" href="sign-up.html">
+                i don't have any accuont
+            </a>
         </div>
-    </nav>
-
-    <div class="container text-center">
-        <div id="products-cart" class="mx-auto row"></div>
     </div>
-
-    <a href="shop.html">
-        <div class="sb_kharid"></div>
-        <div id="p-num" class="sb-kharid border border-2"></div>
-    </a>
-
-    
-    <script src="js/index-app.js"></script>
-    <script>console.log(123)</script>
+    <!-- bootstrap js links -->
     <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.esm.js"></script>
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

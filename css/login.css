@@ -1,0 +1,24 @@
+.bg-dark-body{
+    background: #323232;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.overflow-a{
+    overflow: auto;
+}
+.f-right{
+    float: right;
+}
+.w-100{
+    width: 100%;
+}
+.h-100{
+    height: 100%;
+}
+.text-none{
+    text-decoration: none;
+}
+.position-relative{
+    position: relative;
+}

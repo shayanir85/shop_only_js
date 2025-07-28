@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سبد خرید</title>
+    <link href="bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="back bg-dark">
+    <nav class="sticky-top navbar navbar-expand-lg bg-body-tertiary shadow-lg">
+        <div class="container-fluid">
+            <a class="" href="#">
+                <img class="m-2" src="img/logo.png" style="height: 50px;" alt="">
+            </a>
+            <form class="" style="left: 0px;" role="search">
+                <input id="s-input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html"> مشاهده سبد خرید </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="main.html">خرید</a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn mr-2 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        دسته بندی
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" id="LG">لوازم جانبی</a></li>
+                        <li><a class="dropdown-item" id="GK">قطعات کامپیوتر</a></li>
+                        <li><a class="dropdown-item" id="M">مانیتور</a></li>
+                        <li><a class="dropdown-item" id="SH">شبکه</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <div id="products-cart" class="mx-auto row"></div>
+    </div>
+
+    <a href="shop.html">
+        <div class="sb_kharid"></div>
+        <div id="p-num" class="sb-kharid border border-2"></div>
+    </a>
+
+    
+    <script src="js/main-app.js"></script>
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
