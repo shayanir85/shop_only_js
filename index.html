@@ -8,35 +8,34 @@
     <link rel="stylesheet" href="css/login.css">
     <!-- bootstrap Links -->
     <link href="bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap-5.3.7-dist/css/bootstrap-grid.min.css" rel="stylesheet">
-    <link href="bootstrap-5.3.7-dist/css/bootstrap-grid.rtl.css" rel="stylesheet">
-    <link href="bootstrap-5.3.7-dist/css/bootstrap-reboot.min.css" rel="stylesheet">
-    <link href="bootstrap-5.3.7-dist/css/bootstrap-utilities.min.css" rel="stylesheet">
-    <link href="bootstrap-5.3.7-dist/css/bootstrap-utilities.rtl.min.css" rel="stylesheet">
+    <style>
+
+    </style>
 </head>
 
 <body>
-    <!-- bg-dark-body custome css class in 'css/login.css'  -->
     <div class="bg-dark-body">
-        <!-- fatemeh: center the div verticaly -->
-        <form
-            class="position-relative justify-content-center align-items-center m-5 rounded-4 p-3 bg-light col overflow-a col-4 mx-auto">
-            <div class="m-4">
-                <label for="name" class="mt-1 text-muted">Email:</label>
-                <input type="email" class="form-control" name="name" id="">
+        <div class="login-container">
+            <form class="overflow-a rounded-4 p-3 bg-light mx-3">
+                <div class="m-4">
+                    <label for="email" class="mt-1 text-muted">Email:</label>
+                    <input type="email" class="form-control" name="email" id="email">
+                </div>
+                <div class="m-4">
+                    <label for="password" class="mt-1 text-muted">Password:</label>
+                    <input type="password" class="form-control" name="password" id="password">
+                </div>
+                <input class="btn btn-info m-3 float-end" type="submit" value="Login">
+            </form>
+            <div class="w-100 text-center mt-3">
+                <a class="nav-item text-secondary text-none" href="sign-up.html">
+                    I don't have an account
+                </a>
             </div>
-            <input class="btn btn-info m-3 f-right" type="submit" value="Login">
-        </form>
-        <div class="w-100 text-center mx-auto">
-            <a class="nav-item text-secondary text-none" href="sign-up.html">
-                i don't have any accuont
-            </a>
         </div>
     </div>
+
     <!-- bootstrap js links -->
     <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="bootstrap-5.3.7-dist/js/bootstrap.esm.js"></script>
-    <script src="bootstrap-5.3.7-dist/js/bootstrap.min.js"></script>
 </body>
-
 </html>

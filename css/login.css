@@ -1,24 +1,45 @@
-.bg-dark-body{
+.bg-dark-body {
     background: #323232;
     position: absolute;
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.overflow-a{
+
+.overflow-a {
     overflow: auto;
 }
-.f-right{
+
+.f-right {
     float: right;
 }
-.w-100{
+
+.w-100 {
     width: 100%;
 }
-.h-100{
+
+.h-100 {
     height: 100%;
 }
-.text-none{
+
+.text-none {
     text-decoration: none;
 }
-.position-relative{
+
+.position-relative {
     position: relative;
+}
+
+.bg-dark-body {}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.text-none {
+    text-decoration: none;
 }
