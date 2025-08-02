@@ -124,33 +124,10 @@
         "رابط": "SATA III"
       },
       "price": 3200000,
-      "image": "img/gpu.jpg",
+      "image": "img/hard_external.jpg",
       "number_of_products": 260
     },
-    {
-      "classification":"SH",
-      "name": "کارت خوان یو اس بی",
-      "model": "Transcend RDF8",
-      "features": {
-        "سرعت انتقال": "5 گیگابیت بر ثانیه",
-        "پورت": "USB 3.0"
-      },
-      "price": 250000,
-      "image": "img/gpu.jpg",
-      "number_of_products": 140
-    },
-    {
-      "classification":"SH",
-      "name": "مودم وای فای تی پی لینک",
-      "model": "Archer C6",
-      "features": {
-        "سرعت": "1200 مگابیت بر ثانیه",
-        "فرکانس": "دو بانده"
-      },
-      "price": 1800000,
-      "image": "img/gpu.jpg",
-      "number_of_products": 230
-    },
+    
     {
       "classification":"M",
       "name": "مانیتور گیمینگ ایسوس",
@@ -161,7 +138,7 @@
         "رزولوشن": "1920x1080"
       },
       "price": 8500000,
-      "image": "img/gpu.jpg",
+      "image": "img/monitor.jpg",
       "number_of_products": 10
     }
   ]
