@@ -28,7 +28,7 @@ document.getElementById('login-form').addEventListener('submit', function (event
     } else {
         Toast.fire({
             icon: 'error',
-            title: 'Invalid credentials'
+            title: 'check your username and password'
         });
     }
 });
