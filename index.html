@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سبد خرید</title>
-    <link href="bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -51,14 +51,33 @@
     <div class="container text-center">
         <div id="products-cart" class="mx-auto row"></div>
     </div>
+    <div id="shop">
+        <a href='shop.html?username='>
+            <div class="sb_kharid"></div>
+            <div id="p-num" class="sb-kharid border border-2"></div>
+        </a>
+    </div>
 
-    <a href="shop.html">
-        <div class="sb_kharid"></div>
-        <div id="p-num" class="sb-kharid border border-2"></div>
-    </a>
 
-    
     <script src="js/main-app.js"></script>
+    <script>
+        function checkAuth() {
+            const isAuthenticated = sessionStorage.getItem('isAuthenticated') === 'true';
+            if (!isAuthenticated) {
+                window.location.href = 'login.html';
+            }
+        }
+
+        // Initialize check
+        checkAuth();
+
+        // Logout function (add this to your logout button handler)
+        function logout() {
+            sessionStorage.removeItem('isAuthenticated');
+            sessionStorage.removeItem('username');
+            window.location.href = 'login.html';
+        }
+    </script>
     <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

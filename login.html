@@ -16,10 +16,10 @@
 <body>
     <div class="bg-dark-body">
         <div class="login-container">
-            <form class="overflow-a rounded-4 p-3 bg-light mx-3">
+            <form id="login-form" class="overflow-a rounded-4 p-3 bg-light mx-3">
                 <div class="m-4">
-                    <label for="email" class="mt-1 text-muted">Email:</label>
-                    <input type="email" class="form-control" name="email" id="email">
+                    <label for="name" class="mt-1 text-muted">Email:</label>
+                    <input type="text" class="form-control" name="name" id="name">
                 </div>
                 <div class="m-4">
                     <label for="password" class="mt-1 text-muted">Password:</label>
@@ -35,7 +35,11 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/login.js"></script>
     <!-- bootstrap js links -->
     <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

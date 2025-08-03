@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log(123)
-
     document.getElementById('p-num').style.display = 'none';
     fetch('/js/product.json')
         .then(response => {
@@ -181,4 +179,5 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Failed to fetch data:', error);
             alert('خطا در دریافت اطلاعات محصولات. لطفاً دوباره تلاش کنید.');
-        });});
+        });
+});
