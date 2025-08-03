@@ -111,7 +111,7 @@
         "رابط": "USB 3.0"
       },
       "price": 1500000,
-      "image": "img/gpu.jpg",
+      "image": "img/hard_external.jpg",
       "number_of_products": 190
     },
     {
@@ -124,7 +124,7 @@
         "رابط": "SATA III"
       },
       "price": 3200000,
-      "image": "img/hard_external.jpg",
+      "image": "img/hard-ssd-internal.jpg",
       "number_of_products": 260
     },
     

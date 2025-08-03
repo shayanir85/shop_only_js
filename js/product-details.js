@@ -6,12 +6,12 @@
         const productId = getQueryParam('id');
         if (productId) {
             fetch('js/product.json')
-                // .then(response => {
-                //     if (!response.ok) {
-                //         throw new Error(`HTTP error! Status: ${response.status}`);
-                //     }
-                //     return response.json();
-                // })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     const product = data.products[productId];
                     const productDetails = document.getElementById('product-details');
