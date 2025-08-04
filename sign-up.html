@@ -1,50 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Form</title>
+    <title>ثبت نام در سایت</title>
+    <link rel="icon" href="img/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/login.css">
-    <!-- Only need the main Bootstrap CSS -->
+
     <link href="bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-dark-body">
-    <div class="container d-flex flex-column min-vh-100 justify-content-center">
-        <div class="login-container">
-            <form id="signupForm" class="overflow-a rounded-4 p-3 bg-light mx-3">
-                <div class="m-4">
-                    <label for="name" class="mt-1 text-muted">Full Name:</label>
-                    <input type="text" class="form-control" name="name" id="name" required>
+<body class="d-flex align-items-center justify-content-center vh-100 bg-dark-body vazir-font">
+    <div class="login-container card shadow-lg border-0 rounded-4">
+        <div class="card-body p-5">
+            <h3 class="card-title text-center mb-4">ثبت نام</h3>
+            <p class="text-center text-muted mb-4">لطفا اطلاعات خود را جهت ثبت نام وارد کنید.</p>
+            <form id="signupForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">نام و نام خانوادگی:</label>
+                    <input type="text" class="form-control" name="name" id="name" required placeholder="نام کامل خود را وارد کنید">
                 </div>
-                <div class="m-4">
-                    <label for="email" class="mt-1 text-muted">Email:</label>
-                    <input type="email" class="form-control" name="email" id="email" required>
+                <div class="mb-3">
+                    <label for="email" class="form-label">ایمیل:</label>
+                    <input type="email" class="form-control" name="email" id="email" required placeholder="ایمیل خود را وارد کنید">
                 </div>
-                <div class="m-4">
-                    <label for="password" class="mt-1 text-muted">Password:</label>
-                    <input type="password" class="form-control" name="password" id="password" required minlength="8">
+                <div class="mb-3">
+                    <label for="password" class="form-label">رمز عبور:</label>
+                    <input type="password" class="form-control" name="password" id="password" required minlength="8" placeholder="حداقل ۸ کاراکتر">
                 </div>
-                <div class="m-4">
-                    <label for="confirm-password" class="mt-1 text-muted">Confirm Password:</label>
-                    <input type="password" class="form-control" name="confirm-password" id="confirm-password" required>
+                <div class="mb-4">
+                    <label for="confirm-password" class="form-label">تکرار رمز عبور:</label>
+                    <input type="password" class="form-control" name="confirm-password" id="confirm-password" required placeholder="رمز عبور را مجدداً وارد کنید">
                 </div>
-                <button type="submit" class="btn btn-info m-3 float-end" id="sub-btn">
-                    Sign Up
-                </button>
+                <button type="submit" class="btn btn-primary w-100 py-2" id="sub-btn">ثبت نام</button>
             </form>
-        </div>
-        <div class="w-100 text-center mt-3 mx-auto">
-            <a class="nav-item text-secondary text-decoration-none" href="login.html">
-                I already have an account
-            </a>
+            <div class="text-center mt-4">
+                <a class="nav-item text-secondary" href="login.html">
+                    حساب کاربری دارید؟ وارد شوید.
+                </a>
+            </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="js/sginup.js"></script>
-    <!-- Only need the main Bootstrap JS bundle -->
+
     <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
