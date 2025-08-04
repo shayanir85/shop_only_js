@@ -1,45 +1,88 @@
+:root {
+    /* Color Palette */
+    --primary-color: #007bff;
+    --primary-color-hover: #0056b3;
+    --secondary-color: #6c757d;
+    --background-color: #1a1a1a;
+    --card-background: #ffffff;
+    --text-color: #343a40;
+    --border-color: #e9ecef;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+
+    /* Typography */
+    --font-family-vazir: 'Vazirmatn', sans-serif;
+}
+
+/* فونت Vazirmatn */
+.vazir-font {
+    font-family: var(--font-family-vazir);
+}
+
+/* پس‌زمینه تیره و مدرن */
 .bg-dark-body {
-    background: #323232;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: var(--background-color);
+    background-image: linear-gradient(135deg, #2b2b2b 0%, #1a1a1a 100%);
 }
 
-.overflow-a {
-    overflow: auto;
-}
-
-.f-right {
-    float: right;
-}
-
-.w-100 {
-    width: 100%;
-}
-
-.h-100 {
-    height: 100%;
-}
-
-.text-none {
-    text-decoration: none;
-}
-
-.position-relative {
-    position: relative;
-}
-
-.bg-dark-body {}
-
+/* کانتینر اصلی فرم ورود */
 .login-container {
     width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 450px;
+    background-color: var(--card-background);
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px var(--shadow-color);
 }
 
-.text-none {
+/* استایل هدر فرم */
+.card-title {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+/* استایل input ها */
+.form-control {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* استایل دکمه اصلی */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-hover);
+    border-color: var(--primary-color-hover);
+    transform: translateY(-2px);
+}
+
+/* استایل لینک */
+.text-secondary {
+    color: var(--secondary-color) !important;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.text-secondary:hover {
+    color: var(--primary-color) !important;
+}
+
+/* استایل برای صفحه ثبت نام (sign-up) - اگر نیاز به استایل خاصی بود */
+.signup-container .card-body {
+    padding: 2rem 1.5rem;
+}
+
+.signup-container .form-label {
+    font-size: 0.9rem;
 }

@@ -1,45 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login-Form</title>
+    <title>ورود به حساب کاربری</title>
+    <link rel="icon" href="img/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/login.css">
-    <!-- bootstrap Links -->
+    
     <link href="bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-
-    </style>
 </head>
+<body class="d-flex align-items-center justify-content-center vh-100 bg-dark-body vazir-font">
 
-<body>
-    <div class="bg-dark-body">
-        <div class="login-container">
-            <form id="login-form" class="overflow-a rounded-4 p-3 bg-light mx-3">
-                <div class="m-4">
-                    <label for="name" class="mt-1 text-muted">Email:</label>
-                    <input type="text" class="form-control" name="name" id="name">
+    <div class="login-container card shadow-lg border-0 rounded-4">
+        <div class="card-body p-5">
+            <h3 class="card-title text-center mb-4">ورود</h3>
+            <p class="text-center text-muted mb-4">برای ادامه، لطفا وارد حساب کاربری خود شوید.</p>
+            <form id="login-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">ایمیل:</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="ایمیل خود را وارد کنید">
                 </div>
-                <div class="m-4">
-                    <label for="password" class="mt-1 text-muted">Password:</label>
-                    <input type="password" class="form-control" name="password" id="password">
+                <div class="mb-4">
+                    <label for="password" class="form-label">رمز عبور:</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="رمز عبور خود را وارد کنید">
                 </div>
-                <input class="btn btn-info m-3 float-end" type="submit" value="Login">
+                <button type="submit" class="btn btn-primary w-100 py-2">ورود</button>
             </form>
-            <div class="w-100 text-center mt-3">
-                <a class="nav-item text-secondary text-none" href="sign-up.html">
-                    I don't have an account
+            <div class="text-center mt-4">
+                <a class="nav-item text-secondary" href="sign-up.html">
+                    حساب کاربری ندارید؟ ثبت نام کنید.
                 </a>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    
     <script src="js/login.js"></script>
-    <!-- bootstrap js links -->
+
     <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
