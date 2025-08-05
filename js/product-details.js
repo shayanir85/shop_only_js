@@ -31,6 +31,23 @@ function joinSpecs(specs) {
     `).join('');
 }
 
+// ---- New function to update the cart count badges ----
+function updateCartCount() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const totalCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
+    const cartBadges = document.querySelectorAll('#p-num');
+    cartBadges.forEach(badge => {
+        if (totalCount > 0) {
+            badge.textContent = totalCount.toLocaleString('fa-IR');
+            badge.style.display = 'block';
+        } else {
+            badge.style.display = 'none';
+        }
+    });
+}
+// --------------------------------------------------------
+
 // Cart management functions
 function updateCartDisplay(quantityDisplay, btnGroup, addButton, quantity) {
     quantityDisplay.value = quantity;
@@ -55,6 +72,7 @@ function addToCart(product) {
     }
     
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    updateCartCount(); // Call the new function to update the badge
     return cartItems.find(item => item.model === product.model).quantity;
 }
 
@@ -70,6 +88,7 @@ function decreaseFromCart(product) {
         }
         
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        updateCartCount(); // Call the new function to update the badge
     }
     
     return cartItems[existingItemIndex]?.quantity || 0;
@@ -79,6 +98,9 @@ function decreaseFromCart(product) {
 function loadProductDetails() {
     const productId = getQueryParam('id');
     const productDetails = document.getElementById('product-details');
+
+    // Call this function at the start to ensure the cart count is updated on page load
+    updateCartCount(); 
 
     if (!productId) {
         productDetails.innerHTML = '<p class="text-center">محصول یافت نشد.</p>';
@@ -141,7 +163,7 @@ function loadProductDetails() {
                             <div class="btn-group quantity-control ">
                                 <button class="btn btn-success btn-sm me-2 quantity-increase" data-index="${productId}">+</button>
                                 <input type="text" class="form-control text-center quantity-display" value="1" readonly>
-                                <button class="btn btn-danger btn-sm me-2 quantity-decrease" data-index="${productId}">-</button>                        
+                                <button class="btn btn-danger btn-sm me-2 quantity-decrease" data-index="${productId}">-</button>
                             </div>
                         </div>
                     </div>
