@@ -16,7 +16,7 @@ function updateCartBadge() {
 
 // Function to generate and display product cards
 function displayProducts(products) {
-    const productListContainer = document.getElementById('product-list');
+    const productListContainer = document.getElementById('products-cart');
     if (!productListContainer) {
         console.error('Product list container not found!');
         return;
@@ -31,6 +31,7 @@ function displayProducts(products) {
 
     for (const productId in products) {
         const product = products[productId];
+        console.log(productId)
         const cardHTML = `
             <div class="col">
                 <div class="card card-product">
@@ -46,6 +47,7 @@ function displayProducts(products) {
                 </div>
             </div>
         `;
+        
         productListContainer.insertAdjacentHTML('beforeend', cardHTML);
     }
 

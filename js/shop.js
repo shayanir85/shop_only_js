@@ -31,21 +31,34 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       cartHTML += `
-        <div class="col-12 col-md-3 text-center">
-            <img src="${item.image}" class="img-fluid mt-3" style="max-width: 100%; max-height: 100px;" alt="Product Image">
-        </div>
-        <div class="col-12 col-md-5 mt-3  mx-auto text-center text-md-start">
-            <strong>قیمت: ${new Intl.NumberFormat('fa-IR', { style: 'decimal' }).format(item.price)} تومان<br>${item.name}</strong>
-        </div>
-        <div class="col-12 col-md-4 mt-3 mt-md-0 d-flex flex-column flex-md-row justify-content-center justify-content-md-end align-items-center">
-          <label class="text-center mb-2 mb-md-0" for="tedad">تعداد:</label>
-          <div class="d-flex justify-content-center">
-            <button class="btn btn-danger m-2 btn-sm me-2" onclick="decreaseQuantity(${index})">-</button>  
-            <input class="form-control m-2 text-center" onchange="updateQuantity(${index}, this.value)" name="tedad" style="width: 60px;" value="${item.quantity}">
-            <button class="btn btn-success m-2 btn-sm ms-2" onclick="increaseQuantity(${index})">+</button>
-          </div>
-        </div>
-        <hr >`;
+                     <div class="card p-3 rounded-4 card-product-shop">
+                        <div class="row align-items-center g-3">
+                            <div class="col-md-2 text-center">
+                                <img src="${product.image}" class="img-fluid cart-item-img" alt="${product.name}">
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="cart-item-title mb-1">${product.name}</h5>
+                                <small class="text-muted">${product.model}</small>
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <p class="mb-0 fw-bold">${product.price.toLocaleString('fa-IR')} تومان</p>
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <div class="input-group">
+                                    <button class="btn btn-sm btn-success quantity-increase" data-model="${product.model}">+</button>
+                                    <input type="text" class="form-control text-center" value="${cartItem.quantity.toLocaleString('fa-IR')}" readonly>
+                                    <button class="btn btn-sm btn-danger quantity-decrease" data-model="${product.model}">-</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-center d-flex justify-content-between align-items-center">
+                                <p class="mb-0 fw-bold text-primary flex-grow-1">${itemTotal.toLocaleString('fa-IR')} تومان</p>
+                                <button class="btn btn-sm btn-outline-danger ms-2 remove-from-cart" data-model="${product.model}">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+      `;
     });
 
     // Calculate tax (10% of total price + shipping fee)

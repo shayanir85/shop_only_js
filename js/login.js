@@ -11,7 +11,7 @@ document.getElementById('login-form').addEventListener('submit', function (event
     const name = document.getElementById('name').value;
     const pass = document.getElementById('password').value;
     const UserInfo = JSON.parse(localStorage.getItem('users')) || [];
-
+    console.log(UserInfo)
     const user = UserInfo.find(user => user.name === name && user.password === pass);
     if (user) {
         // Set session flag and store minimal user data

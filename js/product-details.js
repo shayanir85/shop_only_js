@@ -126,11 +126,11 @@ function loadProductDetails() {
             const featuresHTML = product.features ? joinFeatures(product.features) : '';
             
             productDetails.innerHTML = `
-                <div class="row align-items-center">
+                <div class="row align-items-center ">
                     <div class="col-md-6">
                         <img src="${product.image}" class="img-fluid product-image" alt="${product.name}">
                     </div>
-                    <div class="col-md-6 product-info">
+                    <div class="col-md-6 product-info font">
                         <h1>${product.name}</h1>
                         <h5>${product.model}</h5>
                         <div class="table-responsive">
@@ -160,9 +160,9 @@ function loadProductDetails() {
                                 افزودن به سبد خرید
                                 <span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span>
                             </button>
-                            <div class="btn-group quantity-control ">
+                            <div style='display:none;' class="btn-group quantity-control ">
                                 <button class="btn btn-success btn-sm me-2 quantity-increase" data-index="${productId}">+</button>
-                                <input type="text" class="form-control text-center quantity-display" value="1" readonly>
+                                <input type="text"  class="form-control text-center quantity-display" value="0" readonly>
                                 <button class="btn btn-danger btn-sm me-2 quantity-decrease" data-index="${productId}">-</button>
                             </div>
                         </div>
