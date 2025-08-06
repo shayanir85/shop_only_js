@@ -1,121 +1,107 @@
-/*
 document.addEventListener('DOMContentLoaded', () => {
-  const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  // Get elements from HTML
   const cartContainer = document.getElementById('show-product-shop');
-  const TotalPriceContainer = document.getElementById('TotalPrice');
-  const cargo = document.getElementById('sending-fee');
-  const tax_html = document.getElementById('tax');
+  const emptyCartMessage = document.getElementById('empty-cart-message');
+  const subTotalElement = document.getElementById('sub-total');
+  const taxAmountElement = document.getElementById('tax-amount');
+  const shippingFeeElement = document.getElementById('shipping-fee');
+  const totalPriceElement = document.getElementById('total-price');
+  const checkoutBtn = document.getElementById('checkout-btn');
+
+  // Load cart items
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
   function displayCartItems() {
-    cartContainer.innerHTML = ''; 
-    let cartHTML = '';
-    let TotalPrice = 0;
-    let TotalShippingFee = 0;
-
+    cartContainer.innerHTML = '';
+    
     if (cartItems.length === 0) {
-      cartContainer.innerHTML = '<p class="mt-5 alert alert-info mx-auto col col-3 text-center">سبد خرید شما خالی است.</p>';
-      TotalPriceContainer.innerHTML = `
-        <strong>مجموع کل: ۰ تومان</strong>`;
-      cargo.innerHTML = ''; // Clear shipping fee
-      tax_html.innerHTML = '';
+      emptyCartMessage.style.display = 'block';
+      document.querySelector('.shop-summary-card').style.display = 'none';
       return;
     }
+    
+    emptyCartMessage.style.display = 'none';
+    document.querySelector('.shop-summary-card').style.display = 'block';
 
+    let subTotal = 0;
+    
     cartItems.forEach((item, index) => {
-      const itemTotalPrice = item.price * item.quantity; 
-      TotalPrice += itemTotalPrice; 
+      const itemTotal = item.price * item.quantity;
+      subTotal += itemTotal;
 
-      // Calculate shipping fee for each item
-      if (item.price < 100000) {
-        TotalShippingFee += 5000 * item.quantity;
-      }
-
-      cartHTML += `
-                     <div class="card p-3 rounded-4 card-product-shop">
-                        <div class="row align-items-center g-3">
-                            <div class="col-md-2 text-center">
-                                <img src="${product.image}" class="img-fluid cart-item-img" alt="${product.name}">
-                            </div>
-                            <div class="col-md-4">
-                                <h5 class="cart-item-title mb-1">${product.name}</h5>
-                                <small class="text-muted">${product.model}</small>
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <p class="mb-0 fw-bold">${product.price.toLocaleString('fa-IR')} تومان</p>
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <div class="input-group">
-                                    <button class="btn btn-sm btn-success quantity-increase" data-model="${product.model}">+</button>
-                                    <input type="text" class="form-control text-center" value="${cartItem.quantity.toLocaleString('fa-IR')}" readonly>
-                                    <button class="btn btn-sm btn-danger quantity-decrease" data-model="${product.model}">-</button>
-                                </div>
-                            </div>
-                            <div class="col-md-2 text-center d-flex justify-content-between align-items-center">
-                                <p class="mb-0 fw-bold text-primary flex-grow-1">${itemTotal.toLocaleString('fa-IR')} تومان</p>
-                                <button class="btn btn-sm btn-outline-danger ms-2 remove-from-cart" data-model="${product.model}">
-                                    <span class="material-symbols-outlined">delete</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+      const cartItemHTML = `
+        <div class="card p-3 rounded-4 card-product-shop">
+          <div class="row align-items-center g-3">
+            <div class="col-md-2 text-center">
+              <img src="${item.image}" class="img-fluid cart-item-img" alt="${item.name}">
+            </div>
+            <div class="col-md-4">
+              <h5 class="cart-item-title mb-1">${item.name}</h5>
+              <small class="text-muted">${item.model}</small>
+            </div>
+            <div class="col-md-2 text-center">
+              <p class="mb-0 fw-bold">${item.price.toLocaleString('fa-IR')} تومان</p>
+            </div>
+            <div class="col-md-2 text-center">
+              <div class="input-group">
+                <button class="btn btn-sm btn-danger quantity-decrease" data-index="${index}">-</button>
+                <input type="text" class="form-control text-center" value="${item.quantity}" readonly>
+                <button class="btn btn-sm btn-success quantity-increase" data-index="${index}">+</button>
+              </div>
+            </div>
+            <div class="col-md-2 text-center d-flex justify-content-between align-items-center">
+              <p class="mb-0 fw-bold text-primary flex-grow-1">${itemTotal.toLocaleString('fa-IR')} تومان</p>
+              <button class="btn btn-sm btn-outline-danger ms-2 remove-item" data-index="${index}">
+                <span class="material-symbols-outlined">delete</span>
+              </button>
+            </div>
+          </div>
+        </div>
       `;
+      
+      cartContainer.insertAdjacentHTML('beforeend', cartItemHTML);
     });
 
-    // Calculate tax (10% of total price + shipping fee)
-    const tax = (TotalPrice + TotalShippingFee) * 0.1;
+    // Update summary
+    const shippingFee = subTotal > 100000 ? 0 : 35000;
+    const tax = (subTotal + shippingFee) * 0.09;
+    const total = subTotal + shippingFee + tax;
 
-    // Calculate grand total
-    const grandTotal = TotalPrice + TotalShippingFee + tax;
-
-    // Display shipping fee
-    if(TotalPrice > 100000){
-      TotalShippingFee = 0;
-    }
-    cargo.innerHTML = (TotalShippingFee > 0)? `<p class="text-center"><img src="icon/cargo.png" alt="send"><br>هزینه ارسال: ${new Intl.NumberFormat('fa-IR', { style: 'decimal' }).format(TotalShippingFee)} تومان</p>` : '';
-    //Display tax 
-    tax_html.innerHTML = tax > 0 ?  `<p class="text-center"><img src="icon/tax.png" alt="send"><br>مالیات (10%): ${new Intl.NumberFormat('fa-IR', { style: 'decimal' }).format(tax)} تومان</p>`:'';
-    // Display total price
-    TotalPriceContainer.innerHTML = ` 
-      <strong>مجموع کل: ${new Intl.NumberFormat('fa-IR', { style: 'decimal' }).format(grandTotal)} تومان</p>`;
-
-    cartContainer.innerHTML = cartHTML; 
+    subTotalElement.textContent = subTotal.toLocaleString('fa-IR') + ' تومان';
+    shippingFeeElement.textContent = shippingFee.toLocaleString('fa-IR') + ' تومان';
+    taxAmountElement.textContent = Math.round(tax).toLocaleString('fa-IR') + ' تومان';
+    totalPriceElement.textContent = Math.round(total).toLocaleString('fa-IR') + ' تومان';
   }
 
-  window.updateQuantity = function (index, newQuantity) {
-    const parsedQuantity = parseInt(newQuantity, 10); 
-    if (!isNaN(parsedQuantity)){ 
-      if (parsedQuantity > 0) {
-        cartItems[index].quantity = parsedQuantity; 
+  // Event delegation for dynamic elements
+  cartContainer.addEventListener('click', (e) => {
+    const index = parseInt(e.target.closest('[data-index]')?.dataset.index);
+    if (isNaN(index)) return;
+
+    if (e.target.classList.contains('quantity-increase')) {
+      cartItems[index].quantity += 1;
+    } 
+    else if (e.target.classList.contains('quantity-decrease')) {
+      if (cartItems[index].quantity > 1) {
+        cartItems[index].quantity -= 1;
       } else {
-        cartItems.splice(index, 1); 
+        cartItems.splice(index, 1);
       }
-      localStorage.setItem('cartItems', JSON.stringify(cartItems)); 
-      displayCartItems(); 
     }
-  };
-
-  window.decreaseQuantity = function (index) {
-    if (cartItems[index].quantity > 1) {
-      cartItems[index].quantity -= 1; 
-    } else {
-      cartItems.splice(index, 1); 
+    else if (e.target.classList.contains('remove-item') || 
+             e.target.closest('.remove-item')) {
+      cartItems.splice(index, 1);
     }
-    localStorage.setItem('cartItems', JSON.stringify(cartItems)); 
-    displayCartItems(); 
-  };
 
-  window.increaseQuantity = function (index) {
-    cartItems[index].quantity += 1; 
-    localStorage.setItem('cartItems', JSON.stringify(cartItems)); 
-    displayCartItems(); 
-  };
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    displayCartItems();
+  });
 
+  // Initial display
   displayCartItems();
 });
 
-*/
-
-
+/*
 // Function to update the cart badge on all pages
 function updateCartBadge() {
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -312,4 +298,4 @@ async function updateSummary() {
 document.addEventListener('DOMContentLoaded', () => {
     renderCart();
     updateCartBadge();
-});
+});*/

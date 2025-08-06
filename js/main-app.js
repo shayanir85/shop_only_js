@@ -24,6 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
+            function filterProductsByClassification(classification) {
+                const filteredProducts = allProducts.filter(product =>
+                    product.classification === classification
+                );
+                displayProducts(filteredProducts);
+            }
+
             // Create product card HTML
             function createProductCard(product, index) {
                 return `
@@ -39,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         <input type="text" disabled class="form-control quantity-input" value="${product.quantity}">
                                         <button class="btn btn-sm btn-outline-secondary add-to-cart">+</button>
                                     </div>
-                                    <button class="btn btn-primary card-product-btn add-to-shop-list" data-product-index="${index}">
+                                    <button class="btn btn-success card-product-btn add-to-shop-list" data-product-index="${index}">
                                         افزودن به سبد خرید
                                         <span class="material-symbols-outlined">add_shopping_cart</span>
                                     </button>
@@ -51,10 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Display products
             function displayProducts(products) {
-                productsContainer.innerHTML = products.map((product, index) => 
+                productsContainer.innerHTML = products.map((product, index) =>
                     createProductCard(product, index)
                 ).join('');
-                
+
                 addEventListeners();
                 updateButtonVisibility();
                 updateQuantityDisplays();
@@ -92,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (existingItem) {
                     existingItem.quantity += 1;
                 } else {
-                    const productCopy = {...product, quantity: 1};
+                    const productCopy = { ...product, quantity: 1 };
                     cartItems.push(productCopy);
                 }
 
@@ -126,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             function updateCartCount() {
                 const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
                 const count = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-                
+
                 if (count > 0) {
                     cartCounter.style.display = 'block';
                     cartCounter.textContent = count;
@@ -138,13 +145,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update all quantity displays
             function updateQuantityDisplays() {
                 const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-                
+
                 document.querySelectorAll('.quantity-control').forEach(control => {
                     const index = control.getAttribute('data-product-index');
                     const product = allProducts[index];
                     const cartItem = cartItems.find(item => item.model === product.model);
                     const input = control.querySelector('.quantity-input');
-                    
+
                     if (input) {
                         input.value = cartItem ? cartItem.quantity : 0;
                         product.quantity = cartItem ? cartItem.quantity : 0;
@@ -159,6 +166,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     button.addEventListener('click', (e) => {
                         const index = e.target.closest('.quantity-control').getAttribute('data-product-index');
                         addToCart(index);
+                    });
+                });
+
+                // Add event listeners to dropdown items
+                document.querySelectorAll('.dropdown-item').forEach(item => {
+                    item.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        const classification = item.id;
+                        filterProductsByClassification(classification);
                     });
                 });
 
@@ -183,8 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
             function setupSearch() {
                 searchInput.addEventListener('input', () => {
                     const query = searchInput.value.toLowerCase();
-                    const filtered = allProducts.filter(product => 
-                        product.name.toLowerCase().includes(query) || 
+                    const filtered = allProducts.filter(product =>
+                        product.name.toLowerCase().includes(query) ||
                         product.model.toLowerCase().includes(query)
                     );
                     displayProducts(filtered);
