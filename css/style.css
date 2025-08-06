@@ -1,10 +1,14 @@
 :root {
     /* Color Palette (Light Theme) */
-    --primary-color: #4CAF50; /* Soft Green */
+    --primary-color: #4CAF50;
+    /* Soft Green */
     --primary-color-hover: #66BB6A;
-    --secondary-color: #212529; /* Dark text */
-    --background-color: #f0f2f5; /* Light Grayish background */
-    --card-background: #ffffff; /* White cards */
+    --secondary-color: #212529;
+    /* Dark text */
+    --background-color: #f0f2f5;
+    /* Light Grayish background */
+    --card-background: #ffffff;
+    /* White cards */
     --text-color-light: #212529;
     --text-color-muted: #6c757d;
     --border-color: #dee2e6;
@@ -24,7 +28,7 @@ body {
     transition: background-color 0.5s ease;
 }
 
-.font{
+.font {
     font-family: var(--font-family-vazir) !important;
 }
 
@@ -602,6 +606,7 @@ body {
     background-color: #c82333;
     border-color: #bd2130;
 }
+
 .bg-light-card {
     background-color: var(--background-color) !important;
 }
